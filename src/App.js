@@ -1,12 +1,12 @@
-import React from 'react';
-import './App.css';
-import Main from './Components/Main';
-import Wrapper from './Components/Wrapper';
-import Header from './Components/Header';
+import React from "react";
+import "./App.css";
+import Main from "./components/Main";
+import Wrapper from "./components/Wrapper";
+import Header from "./components/Header";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Wrapper>
         <Header />
         <Main />
