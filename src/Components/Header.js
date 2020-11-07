@@ -3,10 +3,10 @@ import "../styles/Header.css";
 
 const Header = () => {
     return (
-        <Header>
+        <div className="header">
             <h1>Employee Directory</h1>
             <p>Filter or Search by Name</p>
-        </Header>
+        </div>
     )
 }
 

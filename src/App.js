@@ -7,10 +7,7 @@ import Header from "./components/Header";
 function App() {
   return (
     <div>
-      <Wrapper>
-        <Header />
-        <Main />
-      </Wrapper>
+      <Header />
     </div>
   );
 }
