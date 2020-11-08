@@ -6,9 +6,13 @@ import Header from "./components/Header";
 
 function App() {
   return (
-    <div>
+    <Wrapper>
       <Header />
-    </div>
+      <Main>
+        
+      </Main>
+      
+    </Wrapper>
   );
 }
 
