@@ -4,9 +4,9 @@ import "../styles/Main.css";
 
 const Main = () => {
     return (
-        <>
+        <div>
             <DataArea />
-        </>    
+        </div>    
     );
 };
 
