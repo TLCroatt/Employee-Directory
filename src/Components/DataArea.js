@@ -8,23 +8,43 @@ import DataAreaContext from "../utils/DataAreaContext";
 
 //put in a functional component
 const DataArea = () => {
-    const [employees, setEmployeesState] = useState([]);
-    const [filteredEmployees, setFilteredEmployees] = useState([]);
-    const [sortEmployees, setSortEmployees] = useState(false);
-
+    const [employees, setEmployeesState] = useState({
+        employees: [],
+        order: "ascend",
+        filteredEmployees: [],
+        headings: [
+            { name: "Image", width: "10%", },
+            { name: "Name", width: "20%", },
+            { name: "Phone", width: "10%", },
+            { name: "Email", width: "20%", },
+            { name: "DOB", width: "10%", }
+        ]
+    });
+    
     useEffect(() => {
         console.log("hello")
-        API.getEmployees().then(results => {
-            console.log(results.data)
+        loadEmployees()
+    }, []);
+
+    function loadEmployees() {
+        API.getEmployees()
+            .then(results => 
             setEmployeesState({
                 ...employees,
                 employees: results.data
             })
+            ).catch(err => console.log(err)); 
+        
+    }    
 
-        })
-    }, []);
+    const [filteredEmployees, setFilteredEmployees] = useState([]);
+    const [sortEmployees, setSortEmployees] = useState(false);
+
 return (
-    <div></div>
+    <DataAreaContext.Provider value={{ employeeState, handleInputChange, handleSort}}>
+        <Nav />
+<div className="data-area">{employeeState.filteredEmployees.length > 0 ? <DataTable /> : <div></div>}</div>
+    </DataAreaContext.Provider>
 )
 }
 

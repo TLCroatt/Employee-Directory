@@ -1,5 +1,7 @@
 import React from "react";
 
-export const DataAreaContext = React.createContext({
+const DataAreaContext = React.createContext({
 
 });
+
+export default DataAreaContext;
