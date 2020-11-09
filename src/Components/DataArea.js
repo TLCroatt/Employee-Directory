@@ -4,13 +4,14 @@ import Nav from "./Nav";
 import API from "../utils/API";
 import "../styles/DataArea.css";
 import DataAreaContext from "../utils/DataAreaContext";
+import SearchBox from "./SearchBox";
 
 
 //put in a functional component
 const DataArea = () => {
     const [employees, setEmployees] = useState([{}]);
     const [filteredEmployees, setFilteredEmployees] = useState([{}]);
-    const [sortEmployees, setSortEmployees] = useState(false);
+    const [sortEmployees, setSortEmployees] = useState("ascending");
     const [headings, setHeadings] = useState([
         { name: "Image", width: "10%" },
         { name: "Name", width: "20%" },
@@ -24,10 +25,28 @@ const DataArea = () => {
         API.getEmployees()
             .then(res => {
                 setEmployees(res.data.results);
-                setFilteredEmployees(res.data.results)
+                //setFilteredEmployees(res.data.results)
             }).catch(err => {console.log(err)}); 
     }, []);
 
+    const handleSort = () => {
+        if (sortEmployees === "ascending") {
+            filteredEmployees.sort((a, b) => (a.name.first > b.name.first) ? 1 : (a.name.first === b.name.first) ? ((a.name.last > b.name.last) ? 1 : -1) :-1);
+            setSortEmployees("descending");
+        } else {
+            filteredEmployees.sort((a, b) => (a.name.first < b.name.first) ? 1 : (a.name.first === b.name.first) ? ((a.name.last < b.name.last) ? 1 : -1) : -1);
+            setSortEmployees("ascending");
+        }
+
+    }
+
+    const handleInputChange = (e) => {
+        const { value } = e.target;
+        setFilteredEmployees(value);
+    }
+
+
+    
         
         
         
@@ -35,14 +54,12 @@ const DataArea = () => {
     
 
 return (
-   /* <DataAreaContext.Provider value={{ employeeState, handleInputChange, handleSort}}>
+   <DataAreaContext.Provider value={{ employees, filteredEmployees, sortEmployees, headings, handleInputChange, handleSort}}>
         <Nav />
-<div className="data-area">{employeeState.filteredEmployees.length > 0 ? <DataTable /> : <div></div>}</div>
+        <div className="data-area">{employees.filteredEmployees.length > 0 ? <DataTable /> : <div></div>}</div>
+        <SearchBox />
+        <DataTable />
     </DataAreaContext.Provider>
-)*/
-<div>
-    <DataTable />
-</div>
 )
 }
 
