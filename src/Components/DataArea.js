@@ -45,14 +45,6 @@ const DataArea = () => {
         setFilteredEmployees(value);
     }
 
-
-    
-        
-        
-        
-
-    
-
 return (
    <DataAreaContext.Provider value={{ employees, filteredEmployees, sortEmployees, headings, handleInputChange, handleSort}}>
         <Nav />
