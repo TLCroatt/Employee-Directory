@@ -55,8 +55,4 @@ return (
 )
 }
 
-//set state for sorting table (could be a boolean/toggle)
-//set state for filter(search) - this updates every time you run a search - will be set to same value as ^
-
-
 export default DataArea;
