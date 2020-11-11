@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import DataTable from "./DataTable";
-import Nav from "./Nav";
+//import Nav from "./Nav";
 import API from "../utils/API";
 import "../styles/DataArea.css";
 import DataAreaContext from "../utils/DataAreaContext";
@@ -25,7 +25,7 @@ const DataArea = () => {
         API.getEmployees()
             .then(res => {
                 setEmployees(res.data.results);
-                //setFilteredEmployees(res.data.results)
+                setFilteredEmployees(res.data.results)
             }).catch(err => {console.log(err)}); 
     }, []);
 
@@ -47,9 +47,9 @@ const DataArea = () => {
 
 return (
    <DataAreaContext.Provider value={{ employees, filteredEmployees, sortEmployees, headings, handleInputChange, handleSort}}>
-        <Nav />
-        <div className="data-area">{employees.filteredEmployees.length > 0 ? <DataTable /> : <div></div>}</div>
+        {/* <Nav /> */}
         <SearchBox />
+        <div className="data-area">{filteredEmployees.length > 0 ? <DataTable /> : <div></div>}</div>
         <DataTable />
     </DataAreaContext.Provider>
 )

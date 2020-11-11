@@ -8,14 +8,20 @@ const SearchBox = () => {
 
     return (
         <div className="searchbox">
-           <label htmlFor='search'>Search:</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Search</span>
+                
+                <textarea class="form-control" aria-label="With textarea"></textarea>
+                </div>
                 <input
-                    name='search'
+                    className='form-control mr-sm-2'
                     type='text'
                     placeholder='Search'
                     id='search'
                     onChange={handleInputChange}
                 />
+                </div>
         </div>
     )
 }
