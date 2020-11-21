@@ -19,7 +19,7 @@ return (
     <tbody>
         { filteredEmployees[0] !== undefined && filteredEmployees[0].name !== undefined ? (filteredEmployees.map(({ login, name, picture, phone, email, dob }) => {
             return (
-                <tr key {...login.uuid}>
+                <tr key={login.uuid}>
                     <td data-header="Image" className="align-middle">
                         <img src={picture.medium} alt={"profile image for" + name.first + " " + name.last} />
                     </td>
@@ -39,7 +39,7 @@ return (
             )
         })
     ) : (
-        <tr>No matches found</tr>
+        <></>
     )}
     </tbody>
     );

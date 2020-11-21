@@ -43,12 +43,17 @@ const DataArea = () => {
     const handleInputChange = (e) => {
         const search = e.target.value;
         const filteredList = employees.filter(item =>{
-            let list = Object.values(item).join("").toLowerCase();
-            return list.indexOf(search.toLowerCase() !== -1); 
-        })
-
+          let list = Object.values(item).join("").toLowerCase();
+          return list.indexOf(search.toLowerCase()) !== -1;
+        });
+        
         setFilteredEmployees(filteredList);
     }
+
+    useEffect(() => {
+        console.log("Filtered" ,
+        filteredEmployees)
+    }, [filteredEmployees])
 
 return (
    <DataAreaContext.Provider value={{ employees, filteredEmployees, sortEmployees, headings, handleInputChange, handleSort}}>

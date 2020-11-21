@@ -8,9 +8,9 @@ const SearchBox = () => {
 
     return (
         <div className="searchbox">
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">Search</span>
+            <div className="input-group">
+                <div className="input-group-prepend">
+                    <span className="input-group-text">Search</span>
                 </div>
                 <input
                     className='form-control mr-sm-2'

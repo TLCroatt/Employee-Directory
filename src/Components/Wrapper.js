@@ -1,9 +1,14 @@
 import React from "react";
 import "../styles/Wrapper.css";
+import Main from "./Main";
+import Header from "./Header"
 
-const Wrapper = ({ children }) => {
+const Wrapper = () => {
     return (
-        <div>{children}</div>
+        <div>
+            <Header />
+            <Main />
+        </div>
     )
 }
 
