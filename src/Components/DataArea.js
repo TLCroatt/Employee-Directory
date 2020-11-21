@@ -3,6 +3,7 @@ import DataTable from "./DataTable";
 import API from "../utils/API";
 import "../styles/DataArea.css";
 import DataAreaContext from "../utils/DataAreaContext";
+import SearchBox from "./SearchBox";
 
 
 
@@ -56,6 +57,7 @@ const DataArea = () => {
 
 return (
    <DataAreaContext.Provider value={{ employees, filteredEmployees, sortEmployees, headings, handleInputChange, handleSort}}>
+       <SearchBox />
         <DataTable />
     </DataAreaContext.Provider>
 )
