@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import DataTable from "./DataTable";
-//import Nav from "./Nav";
 import API from "../utils/API";
 import "../styles/DataArea.css";
 import DataAreaContext from "../utils/DataAreaContext";
-import SearchBox from "./SearchBox";
+
 
 
 //put in a functional component
@@ -57,9 +56,6 @@ const DataArea = () => {
 
 return (
    <DataAreaContext.Provider value={{ employees, filteredEmployees, sortEmployees, headings, handleInputChange, handleSort}}>
-        {/* <Nav /> */}
-        <SearchBox />
-        {/* <div className="data-area">{filteredEmployees.length > 0 ? <DataTable /> : <div></div>}</div> */}
         <DataTable />
     </DataAreaContext.Provider>
 )

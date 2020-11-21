@@ -5,7 +5,7 @@ import Header from "./Header"
 
 const Wrapper = () => {
     return (
-        <div>
+        <div className="wrapper">
             <Header />
             <Main />
         </div>
