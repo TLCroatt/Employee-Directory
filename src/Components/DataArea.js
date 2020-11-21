@@ -41,15 +41,20 @@ const DataArea = () => {
     }
 
     const handleInputChange = (e) => {
-        const { value } = e.target;
-        setFilteredEmployees(value);
+        const search = e.target.value;
+        const filteredList = employees.filter(item =>{
+            let list = Object.values(item).join("").toLowerCase();
+            return list.indexOf(search.toLowerCase() !== -1); 
+        })
+
+        setFilteredEmployees(filteredList);
     }
 
 return (
    <DataAreaContext.Provider value={{ employees, filteredEmployees, sortEmployees, headings, handleInputChange, handleSort}}>
         {/* <Nav /> */}
         <SearchBox />
-        <div className="data-area">{filteredEmployees.length > 0 ? <DataTable /> : <div></div>}</div>
+        {/* <div className="data-area">{filteredEmployees.length > 0 ? <DataTable /> : <div></div>}</div> */}
         <DataTable />
     </DataAreaContext.Provider>
 )

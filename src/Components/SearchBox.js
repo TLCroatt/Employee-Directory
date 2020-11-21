@@ -11,15 +11,13 @@ const SearchBox = () => {
             <div class="input-group">
                 <div class="input-group-prepend">
                     <span class="input-group-text">Search</span>
-                
-                <textarea class="form-control" aria-label="With textarea"></textarea>
                 </div>
                 <input
                     className='form-control mr-sm-2'
-                    type='text'
-                    placeholder='Search'
-                    id='search'
-                    onChange={handleInputChange}
+                    type='serach'
+                    placeholder='Name'
+                    aria-label='search'
+                    onChange={e => handleInputChange(e)}
                 />
                 </div>
         </div>
