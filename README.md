@@ -7,12 +7,12 @@ A React app that allows the user to sort and filter through the employee table b
 ---
 
 ## Table of Contents
-[Installation](#installation)
-[Usage](#usage)
-[License](#license)
-[Contributing](#contributing)
-[Tests](#tests)
-[Questions](#questions)
+[Installation](#installation)\
+[Usage](#usage)\
+[License](#license)\
+[Contributing](#contributing)\
+[Tests](#tests)\
+[Questions](#questions)\
 
 ---
 
@@ -33,4 +33,11 @@ Copyright (c) [2020] [Trisha Croatt]
 ---
 
 ## Contributing
-React\ Bootstrap\ Axios\ Random User API
+React\
+Bootstrap\
+Axios\
+Random User API
+
+---
+
+## Deployed Link
