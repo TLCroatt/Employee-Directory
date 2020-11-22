@@ -4,7 +4,7 @@
 
 A React app that allows the user to sort and filter through the employee table by employee name.
 
-![Employee Directory Demo](https://drive.google.com/file/d/1AQoXa9GuzS5L9JDmVp2vsjEYxtN5fDAD/view)
+![React App](https://user-images.githubusercontent.com/66500773/99913859-4436a000-2cb7-11eb-8791-03d31c5d6f93.gif)
 
 ---
 
