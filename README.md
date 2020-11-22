@@ -42,3 +42,4 @@ Random User API
 ---
 
 ## Deployed
+[https://tlcroatt.github.io/employee-directory/](https://tlcroatt.github.io/employee-directory/)
