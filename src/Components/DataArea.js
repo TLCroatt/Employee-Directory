@@ -11,6 +11,7 @@ const DataArea = () => {
     const [employees, setEmployees] = useState([{}]);
     const [filteredEmployees, setFilteredEmployees] = useState([{}]);
     const [sortEmployees, setSortEmployees] = useState("ascending");
+    // eslint-disable-next-line 
     const [headings, setHeadings] = useState([
         { name: "Image", width: "10%" },
         { name: "Name", width: "20%" },
