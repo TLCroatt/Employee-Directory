@@ -11,8 +11,7 @@ A React app that allows the user to sort and filter through the employee table b
 [Usage](#usage)\
 [License](#license)\
 [Contributing](#contributing)\
-[Tests](#tests)\
-[Questions](#questions)\
+[Deployed](#deployed)
 
 ---
 
@@ -40,4 +39,4 @@ Random User API
 
 ---
 
-## Deployed Link
+## Deployed
